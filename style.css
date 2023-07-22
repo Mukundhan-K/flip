@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./flip_img/AZ5007149PRE_UN_RF_01_A_UN_2048x2048.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-content: center;
+
+}
+.container{
+    height: 600px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+.card img{
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+}
+.card{
+    width: 250px;
+    height: 250px;
+    outline: white solid 1px;
+    outline-offset: 8px;
+    border-radius: 40px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.08s ease;
+}
+.front{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    backface-visibility: hidden;
+}
+.back{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    background-image: url(./flip_img/load_budhha_sri_lank.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+}
+.card:hover{
+    transform: rotateY(180deg);
+    outline-width: 4px;
+}
